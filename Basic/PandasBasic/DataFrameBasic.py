@@ -60,3 +60,39 @@ DataFrame의 색인을 이용해서 얻은 컬럼은 내부 데이터에 대한 
 따라서 Series 객체에 대한 변경은 실제 DataFrame에 반영된다.
 복사본이 필요할 때는 Series 의 copy() 를 사용한다. 
 """
+
+# 중첩된 사전
+pop = {'Nevada' : {2001: 2.4, 2002: 2.9},
+       'Ohio' : {2000: 1.5, 2001: 1.7, 2002: 3.6}}
+frame3 = pd.DataFrame(pop)
+# Nevada 같은 경우 2000년 데이터가 없는데 이는 NaN 으로 추가됨.
+print(frame3)
+# 칼럼 / 로우 전치
+print(frame3.T)
+
+# 2003 index 추가 -> 데이터는 없으므로 NaN
+print(pd.DataFrame(pop, index=[2001, 2002, 2003]))
+
+# Series 객체를 담고 있는 사전 데이터
+pdata = {
+    'Ohio': frame3['Ohio'][:-1],
+    'Nevada': frame3['Nevada'][:2]
+}
+# Series 객체 / indexing test
+# print(frame3['Ohio'][:-1])
+# print(frame3['Ohio'])
+# print(frame3['Nevada'][:2])
+# print(type(frame3['Ohio'][:-1]))
+
+print(pd.DataFrame(pdata))
+# index / column name 생성
+frame3.index.name = 'year'; frame3.columns.name = 'state'
+print(frame3)
+# values: 데이터만 2차원 배열로 반환
+print(frame3.values)
+
+# 컬럼이 서로 다른 dtype 일 때
+print(frame2)
+print(frame2.values)
+print(type(frame2.values)) # numpy.ndarray
+
