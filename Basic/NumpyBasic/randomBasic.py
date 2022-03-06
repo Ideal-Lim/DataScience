@@ -8,8 +8,7 @@ from random import normalvariate
 # 표준정규분포 표본 생성
 randomData = np.random.normal(size=(4,4))
 print(randomData)
-randomData = np.random.normal(size=(4,4))
-print(randomData)
+
 # random vs numpy.random 생성 시간 비교
 n = 1000000
 start = time.time()

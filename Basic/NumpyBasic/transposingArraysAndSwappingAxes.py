@@ -10,11 +10,11 @@ print(arr) # (3,5)
 print(arr.T) # (5,3)
 
 # np.dot 을 이용한 행렬의 내적 구하기
-arr = np.random.randn(6, 3)
+# arr = np.random.randn(6, 3)
 print(arr)
 print(np.dot(arr.T, arr))
 
-#
+# transpose() : 다차원 배열에서 치환
 arr = np.arange(16).reshape((2, 2, 4))
 print(arr)
 print(arr.transpose((1, 0, 2)))

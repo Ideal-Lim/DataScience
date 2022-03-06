@@ -11,7 +11,7 @@ print(data.shape)
 # data 타입
 print(data.dtype)
 
-"""
+"""s
 ndarray 생성
 """
 data1 = [1,2,3,4,5]
@@ -37,6 +37,11 @@ np.ones_like(arr2)
 print(np.arange(15)) # [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14]
 print(np.arange(15).reshape(3, 5))
 
+print(np.full((2,3), 5))
+
+print(np.identity(3))
+print(np.eye(3, k=1))
+print(np.eye(3, k=-1))
 
 
 

@@ -9,7 +9,7 @@ Series
 색인은 배열의 데이터와 연관된 이름을 가지고 있다.
 """
 # index(색인) 와 data 로 이루어짐.
-obj = pd.Series([4,7,-1,2])
+obj = pd.Series([2,10,-1,2])
 print(obj)
 
 # values (data) / index
@@ -25,7 +25,7 @@ print('b' in obj2) # True
 print(4 in obj2) # False -> 색인으로 검색
 
 print(obj2 > 0)
-print(obj2[obj2 < 0])
+print(obj2[obj2 > 0])
 print(obj2 * 2)
 print(np.exp(obj2))
 
@@ -60,8 +60,8 @@ obj4.index.name = 'alphabet'
 print(obj4)
 
 # index 값 변경
-obj4.index = ['e', 'f', 'g', 'h']
-print(obj4)
+obj2.index = ['e', 'f', 'g', 'h']
+print(obj2)
 
 
 

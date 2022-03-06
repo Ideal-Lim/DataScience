@@ -19,3 +19,6 @@ print(arr.astype(np.int32)) # [2 3 5]
 numeric_strings = np.array(['1.24', '-2.4', '24'], dtype=np.string_)
 print(numeric_strings.astype(float))# [ 1.24 -2.4  24.  ]
 
+#축약
+zeros_uint16 = np.zeros(5, dtype='u2')
+print(zeros_uint16.dtype)

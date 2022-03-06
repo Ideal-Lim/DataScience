@@ -4,6 +4,8 @@ numpy 의 중요한 특징은 for 문을 작성하지 않고 데이터를 일괄
 """
 import numpy as np
 arr = np.array([[1., 2., 3.], [4., 5., 6.]])
+print(arr*10)
+print(arr + arr)
 print(arr * arr)
 print(arr ** 2)
 print(1/arr)
